@@ -1,0 +1,11 @@
+<?php
+/**
+ * @var \LCB\PerfectAudience\Success $block
+ */
+?>
+<!--Perfect Audience-->
+<script type="text/javascript">
+    window._pq = window._pq || [];
+    _pq.push(['track', 'PurchasedItem', {orderId: '<?php echo $block->getOrder()->getIncrementId(); ?>', revenue: <?php echo round($block->getOrder()->getGrandTotal(), 2); ?>}]);
+</script>
+<!--End Perfect Audience-->
